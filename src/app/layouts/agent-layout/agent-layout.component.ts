@@ -6,11 +6,11 @@ import * as $ from "jquery";
 import { filter, Subscription } from 'rxjs';
 
 @Component({
-  selector: 'app-admin-layout',
-  templateUrl: './admin-layout.component.html',
-  styleUrls: ['./admin-layout.component.scss']
+  selector: 'app-agent-layout',
+  templateUrl: './agent-layout.component.html',
+  styleUrls: ['./agent-layout.component.scss']
 })
-export class AdminLayoutComponent implements OnInit {
+export class AgentLayoutComponent implements OnInit {
   private _router: Subscription;
   private lastPoppedUrl: string;
   private yScrollStack: number[] = [];

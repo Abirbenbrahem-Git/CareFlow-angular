@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AdminLayoutRoutes } from './admin-layout.routing';
+import { AgentLayoutRoutes } from './agent-layout.routing';
 import { DashboardComponent } from '../../dashboard/dashboard.component';
 import { UserProfileComponent } from '../../user-profile/user-profile.component';
 import { TableListComponent } from '../../table-list/table-list.component';
@@ -21,7 +21,7 @@ import {MatSelectModule} from '@angular/material/select';
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forChild(AdminLayoutRoutes),
+    RouterModule.forChild(AgentLayoutRoutes),
     FormsModule,
     ReactiveFormsModule,
     MatButtonModule,
@@ -43,4 +43,4 @@ import {MatSelectModule} from '@angular/material/select';
   ]
 })
 
-export class AdminLayoutModule {}
+export class AgentLayoutModule {}
