@@ -8,14 +8,14 @@ declare interface RouteInfo {
     class: string;
 }
 export const ROUTES: RouteInfo[] = [
-    { path: '/dashboard', title: 'Dashboard',  icon: 'dashboard', class: '' },
-    { path: '/user-profile', title: 'User Profile',  icon:'person', class: '' },
-    { path: '/table-list', title: 'Table List',  icon:'content_paste', class: '' },
-    { path: '/typography', title: 'Typography',  icon:'library_books', class: '' },
-    { path: '/icons', title: 'Icons',  icon:'bubble_chart', class: '' },
-    { path: '/maps', title: 'Maps',  icon:'location_on', class: '' },
+    { path: '/dashboard', title: 'Tableau de bord',  icon: 'dashboard', class: '' },
+    { path: '/user-profile', title: 'Profil',  icon:'person', class: '' },
+    { path: '/table-list', title: 'Saisir un BS',  icon:'content_paste', class: '' },
+    { path: '/typography', title: 'Historique des dossiers',  icon:'library_books', class: '' },
     { path: '/notifications', title: 'Notifications',  icon:'notifications', class: '' },
-    { path: '/upgrade', title: 'Upgrade to PRO',  icon:'unarchive', class: 'active-pro' },
+    { path: '/icons', title: 'Réclamation',  icon:'feedback', class: '' },
+    { path: '/maps', title: 'Aide / Support',  icon:'help_outline', class: '' },
+    { path: '/upgrade', title: 'Déconnexion',  icon:'logout', class: 'active-pro' },
 ];
 
 @Component({
