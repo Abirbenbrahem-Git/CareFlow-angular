@@ -8,6 +8,7 @@ import { ComponentsModule } from './components/components.module';
 import { AppComponent } from './app.component';
 import { AgentLayoutComponent } from './layouts/agent-layout/agent-layout.component';
 import { AbirComponent } from './abir/abir.component';
+import { SignInComponent } from './sign-in/sign-in.component';
 
 @NgModule({
   imports: [
@@ -23,6 +24,7 @@ import { AbirComponent } from './abir/abir.component';
     AppComponent,
     AgentLayoutComponent,
     AbirComponent,
+    SignInComponent,
 
   ],
   providers: [],

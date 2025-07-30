@@ -15,7 +15,7 @@ export const ROUTES: RouteInfo[] = [
     { path: '/notifications', title: 'Notifications',  icon:'notifications', class: '' },
     { path: '/icons', title: 'Réclamation',  icon:'feedback', class: '' },
     { path: '/maps', title: 'Aide / Support',  icon:'help_outline', class: '' },
-    { path: '/upgrade', title: 'Déconnexion',  icon:'logout', class: 'active-pro' },
+    { path: '/signin', title: 'Déconnexion',  icon:'logout', class: 'active-pro' },
 ];
 
 @Component({

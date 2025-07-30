@@ -9,6 +9,7 @@ import { MapsComponent } from '../../maps/maps.component';
 import { NotificationsComponent } from '../../notifications/notifications.component';
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
 import { FormComponent } from 'app/form/form.component';
+import { SignInComponent } from 'app/sign-in/sign-in.component';
 
 export const AgentLayoutRoutes: Routes = [
     // {
@@ -60,6 +61,6 @@ export const AgentLayoutRoutes: Routes = [
     { path: 'icons',          component: TypographyComponent },
     { path: 'maps',           component: IconsComponent },
     { path: 'notifications',  component: NotificationsComponent },
-    { path: 'upgrade',        component: UpgradeComponent },
+    { path: 'signin',        component: SignInComponent },
     { path: 'form',           component: FormComponent },
 ];
