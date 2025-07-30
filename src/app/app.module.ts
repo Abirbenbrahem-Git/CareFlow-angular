@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
 import { AppComponent } from './app.component';
 import { AgentLayoutComponent } from './layouts/agent-layout/agent-layout.component';
+import { AbirComponent } from './abir/abir.component';
 
 @NgModule({
   imports: [
@@ -21,6 +22,7 @@ import { AgentLayoutComponent } from './layouts/agent-layout/agent-layout.compon
   declarations: [
     AppComponent,
     AgentLayoutComponent,
+    AbirComponent,
 
   ],
   providers: [],

@@ -4,8 +4,10 @@ import { BrowserModule  } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AgentLayoutComponent } from './layouts/agent-layout/agent-layout.component';
+import { AbirComponent } from './abir/abir.component';
 
 const routes: Routes =[
+  {path: 'abir',component:AbirComponent},
   {
     path: '',
     redirectTo: 'dashboard',
