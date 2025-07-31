@@ -6,10 +6,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { AgentLayoutComponent } from './layouts/agent-layout/agent-layout.component';
 import { AbirComponent } from './abir/abir.component';
 import { SignInComponent } from './sign-in/sign-in.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 const routes: Routes =[
   {path: 'abir',component:AbirComponent},
   {path: 'signin',component:SignInComponent},
+  {path: 'signup',component:SignUpComponent},
   {
     path: '',
     redirectTo: 'dashboard',

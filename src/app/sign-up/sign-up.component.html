@@ -1,0 +1,82 @@
+    <div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form">
+					<span class="login100-form-title p-b-1">
+						Créer un compte
+					</span>
+                    <div class="form-image-container">
+                      <img src="assets/img/logotelecom.png" alt="Bienvenue" class="form-image">
+                    </div>
+
+					<div class="form-row">
+                      <div class="wrap-input100 validate-input">
+                       <input class="input100" type="text" name="cin">
+                       <span class="focus-input100" data-placeholder="Numéro de CIN"></span>
+                      </div>
+                      <div class="wrap-input100 validate-input">
+                       <input class="input100" type="text" name="nom">
+                       <span class="focus-input100" data-placeholder="Nom"></span>
+                      </div>
+                      <div class="wrap-input100 validate-input">
+                       <input class="input100" type="text" name="prenom">
+                       <span class="focus-input100" data-placeholder="Prénom"></span>
+                      </div>
+                    </div>
+
+                    <div class="form-row">
+                      <div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
+						<input class="input100" type="text" name="email">
+						<span class="focus-input100" data-placeholder="Adresse e-mail"></span>
+					  </div>
+					  <div class="wrap-input100 validate-input">
+						<input class="input100" type="number" name="tel">
+						<span class="focus-input100" data-placeholder="Numéro de téléphone"></span>
+					  </div>
+                    </div>
+
+                    <div class="form-row">
+					  <div class="wrap-input100 validate-input" data-validate="Enter password">
+						<span class="btn-show-pass">
+							<i class="zmdi zmdi-eye"></i>
+						</span>
+						<input class="input100" type="password" name="pass">
+						<span class="focus-input100" data-placeholder="Mot de passe"></span>
+					  </div>
+					  <div class="wrap-input100 validate-input" >
+						<input class="input100" type="text" name="residence">
+						<span class="focus-input100" data-placeholder="Résidence"></span>
+					  </div>
+                    </div>
+
+                    <div class="form-group-radio">
+                      <label class="radio-label">Rôle :</label>
+                      <label class="radio-option">
+                        <input type="radio" name="role" value="agent">Agent
+                      </label>
+                      <label class="radio-option">
+                        <input type="radio" name="role" value="responsable">Responsable régionale
+                     </label>
+                    </div>
+
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button class="login100-form-btn">
+								S'inscrire
+							</button>
+						</div>
+					</div>
+
+					<div class="text-center p-t-1">
+						<span class="txt1">
+							Vous avez déja un compte ?
+						</span>
+						<a class="txt2 text-danger" routerLink="/signin">Se connecter</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
