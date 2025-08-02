@@ -10,6 +10,13 @@ import { AgentLayoutComponent } from './layouts/agent-layout/agent-layout.compon
 import { AbirComponent } from './abir/abir.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { ResponsableLayoutModule } from './layouts/responsable-layout/responsable-layout.module';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatIconModule } from '@angular/material/icon'; 
+import { MatButtonModule } from '@angular/material/button'; 
 
 @NgModule({
   imports: [
@@ -20,6 +27,12 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     ComponentsModule,
     RouterModule,
     AppRoutingModule,
+    ResponsableLayoutModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatRadioModule,
+    MatIconModule,
+    MatButtonModule,
   ],
   declarations: [
     AppComponent,
@@ -27,6 +40,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     AbirComponent,
     SignInComponent,
     SignUpComponent,
+    UserProfileComponent
 
   ],
   providers: [],

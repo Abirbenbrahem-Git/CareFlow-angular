@@ -7,22 +7,37 @@ import { AgentLayoutComponent } from './layouts/agent-layout/agent-layout.compon
 import { AbirComponent } from './abir/abir.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { ResponsableLayoutComponent } from './layouts/responsable-layout/responsable-layout.component';
 
 const routes: Routes =[
   {path: 'abir',component:AbirComponent},
   {path: 'signin',component:SignInComponent},
   {path: 'signup',component:SignUpComponent},
   {
-    path: '',
-    redirectTo: 'dashboard',
-    pathMatch: 'full',
-  }, {
-    path: '',
+    path: 'responsable',
+    component: ResponsableLayoutComponent,
+    children: [
+      {
+        path: '',
+        loadChildren: () =>
+          import('./layouts/responsable-layout/responsable-layout.module').then(
+            (m) => m.ResponsableLayoutModule
+          ),
+      },
+    ],
+  },
+ {
+    path: 'agent',
     component: AgentLayoutComponent,
     children: [{
       path: '',
       loadChildren: () => import('./layouts/agent-layout/agent-layout.module').then(m => m.AgentLayoutModule)
     }]
+  },
+  {
+    path: '',
+    redirectTo: 'dashboard',
+    pathMatch: 'full',
   }
 ];
 

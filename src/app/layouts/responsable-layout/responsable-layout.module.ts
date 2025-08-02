@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { ResponsableLayoutComponent } from './responsable-layout.component';
+import { SidebarResponsableComponent } from './sidebar-responsable/sidebar-responsable.component';
+import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AgentLayoutRoutes } from './agent-layout.routing';
+import { ResponsableLayoutRoutes } from './responsable-layout.routing';
 import { DashboardComponent } from '../../dashboard/dashboard.component';
 import { UserProfileComponent } from '../../user-profile/user-profile.component';
 import { TableListComponent } from '../../table-list/table-list.component';
@@ -19,10 +21,17 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatSelectModule} from '@angular/material/select';
 import { FormComponent } from 'app/form/form.component';
 import { MatRadioModule } from '@angular/material/radio';
+
+
 @NgModule({
+  declarations: [
+    ResponsableLayoutComponent,
+    SidebarResponsableComponent,
+    
+  ],
   imports: [
     CommonModule,
-    RouterModule.forChild(AgentLayoutRoutes),
+    RouterModule.forChild(ResponsableLayoutRoutes),
     FormsModule,
     ReactiveFormsModule,
     MatButtonModule,
@@ -31,19 +40,8 @@ import { MatRadioModule } from '@angular/material/radio';
     MatInputModule,
     MatSelectModule,
     MatTooltipModule,
-    MatRadioModule
-  ],
-  declarations: [
-    DashboardComponent,
+    MatRadioModule,
     
-    TableListComponent,
-    TypographyComponent,
-    IconsComponent,
-    MapsComponent,
-    NotificationsComponent,
-    UpgradeComponent,
-    FormComponent,
   ]
 })
-
-export class AgentLayoutModule {}
+export class ResponsableLayoutModule { }
