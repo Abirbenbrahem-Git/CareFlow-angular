@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { BulletinService, Bulletin } from '../services/bulletin.service';
 @Component({
   selector: 'app-table-list',
   templateUrl: './table-list.component.html',
@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TableListComponent implements OnInit {
 
-  constructor() { }
+  bulletins: Bulletin[] = [];
+  constructor(private bulletinService: BulletinService) { }
 
-  ngOnInit() {
+   ngOnInit(): void {
+    this.bulletinService.getAllBulletins().subscribe(data => {
+      this.bulletins = data;
+    });
   }
 
 }

@@ -37,32 +37,18 @@
                                   </th>
                               </thead>
                               <tbody>
-                                  <tr>
-                                      <td>
-                                          6
-                                      </td>
-                                      <td>
-                                          Mason Porter
-                                      </td>
-                                      <td>
-                                          Chile
-                                      </td>
-                                      <td>
-                                          Gloucester
-                                      </td>
-                                      <td>
-                                          Gloucester
-                                      </td>
-                                      <td>
-                                          01/11/2025
-                                      </td>
-                                      <td>
-                                          11/13/2025
-                                      </td>
-                                      <td class="text-primary">
-                                          $78,615
-                                      </td>
-                                  </tr>
+                                <tr *ngFor="let b of bulletins">
+                                  <td>{{ b.idbulletin }}</td>
+                                  <td>{{ b.reference }}</td>
+                                  <td>{{ b.nomadherent }}</td>
+                                  <td>{{ b.nommalade }}</td>
+                                  <td>{{ b.typemalade }}</td>
+                                  <td>{{ b.adresse }}</td>
+                                  <td>{{ b.datenaissance | date: 'yyyy-MM-dd' }}</td>
+                                  <td>{{ b.datedepot | date: 'yyyy-MM-dd' }}</td>
+                                  <td>{{ b.datesoin | date: 'yyyy-MM-dd' }}</td>
+                                  <td>{{ b.etat }}</td>
+                              </tr>
                               </tbody>
                           </table>
                       </div>
