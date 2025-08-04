@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BulletinService } from '../services/bulletin.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-form',
@@ -19,14 +20,28 @@ export class FormComponent implements OnInit {
     datesoin: '',
     etat: 'en_cours'
   };
-
+  bulletint: any = this.initBulletin();
   selectedFile: File | null = null;
 
   constructor(private bulletinService: BulletinService) { }
 
   ngOnInit() {
-    
   }
+
+  initBulletin() {
+    return {
+      reference: '',
+      nomadherent: '',
+      nommalade: '',
+      typemalade: '',
+      adresse: '',
+      datenaissance: '',
+      datedepot: '',
+      datesoin: '',
+      etat: 'en_cours'
+    };
+  }
+  
   onFileSelected(event: any) {
     this.selectedFile = event.target.files[0];
   }
@@ -51,6 +66,10 @@ export class FormComponent implements OnInit {
     }
   }
 
-
+onResetForm(form: NgForm) {
+    form.resetForm(); 
+    this.bulletint = this.initBulletin(); 
+    this.selectedFile = null; 
+  }
   
 }
