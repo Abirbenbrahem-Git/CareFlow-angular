@@ -26,4 +26,9 @@ export class BulletinService {
   getAllBulletins(): Observable<Bulletin[]> {
     return this.http.get<Bulletin[]>(`${this.apiUrl}/all`);
   }
+
+  createBulletin(formData: FormData): Observable<any> {
+  return this.http.post(`${this.apiUrl}/post`, formData);
+  }
+
 }
