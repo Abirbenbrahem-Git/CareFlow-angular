@@ -18,13 +18,13 @@
                                       Nom & Prénom du malade
                                   </th>
                                   <th>
-                                      Le malade est
-                                  </th>
-                                  <th>
-                                      Date de naissance
+                                      Type malade
                                   </th>
                                   <th>
                                       Adresse
+                                  </th>
+                                  <th>
+                                      Date de naissance
                                   </th>
                                   <th>
                                       Date dépôt
@@ -38,16 +38,14 @@
                               </thead>
                               <tbody>
                                 <tr *ngFor="let b of bulletins">
-                                  <td>{{ b.idbulletin }}</td>
                                   <td>{{ b.reference }}</td>
-                                  <td>{{ b.nomadherent }}</td>
                                   <td>{{ b.nommalade }}</td>
                                   <td>{{ b.typemalade }}</td>
                                   <td>{{ b.adresse }}</td>
                                   <td>{{ b.datenaissance | date: 'yyyy-MM-dd' }}</td>
                                   <td>{{ b.datedepot | date: 'yyyy-MM-dd' }}</td>
                                   <td>{{ b.datesoin | date: 'yyyy-MM-dd' }}</td>
-                                  <td>{{ b.etat }}</td>
+                                  <td class="text-primary">{{ b.etat }}</td>
                               </tr>
                               </tbody>
                           </table>
