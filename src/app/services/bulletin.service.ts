@@ -31,4 +31,8 @@ export class BulletinService {
   return this.http.post(`${this.apiUrl}/post`, formData);
   }
 
+  deleteBulletin(id: number): Observable<string> {
+    return this.http.delete(`${this.apiUrl}/delete/${id}`, { responseType: 'text' });
+  }
+
 }

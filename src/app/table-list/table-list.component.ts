@@ -16,4 +16,13 @@ export class TableListComponent implements OnInit {
     });
   }
 
+  onDeleteBulletin(id: number) {
+    if (confirm('Voulez-vous vraiment supprimer ce bulletin ?')) {
+      this.bulletinService.deleteBulletin(id).subscribe(() => {
+        this.bulletins = this.bulletins.filter(b => b.idbulletin !== id);
+      });
+    }
+  }
+
+
 }
