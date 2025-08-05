@@ -8,69 +8,96 @@
                       <p class="card-category">Remplir le formulaire</p>
                   </div>
                   <div class="card-body">
-                      <form #bulletinForm="ngForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+                      <form #bulletinForm="ngForm" (ngSubmit)="onSubmit(bulletinForm)" enctype="multipart/form-data">
                           <div class="row">
                               <div class="col-md-4">
                                 <mat-form-field class="example-full-width">
-                                    <input matInput placeholder="Référence BS" [(ngModel)]="bulletin.reference">
+                                    <input matInput name="reference"  placeholder="Référence BS" [(ngModel)]="bulletin.reference" required #reference="ngModel">
                                   </mat-form-field>
+                                   <div *ngIf="reference.invalid && reference.touched" class="text-danger">
+                                      Ce champs est obligatoire.
+                                  </div>
                               </div>
                               <div class="col-md-4">
                                   <mat-form-field class="example-full-width">
-                                    <input matInput placeholder="Nom & Prénom de l'adhérent" [(ngModel)]="bulletin.nomadherent">
+                                    <input matInput name="nomadherent" placeholder="Nom & Prénom de l'adhérent" [(ngModel)]="bulletin.nomadherent" required #nomadherent="ngModel">
                                   </mat-form-field>
+                                  <div *ngIf="nomadherent.invalid && nomadherent.touched" class="text-danger">
+                                         Ce champs est obligatoire.
+                                     </div>
                               </div>
                               <div class="col-md-4">
                                   <mat-form-field class="example-full-width">
-                                    <input matInput placeholder="Nom & Prénom du malade" [(ngModel)]="bulletin.nommalade">
+                                    <input matInput name="nommalade" placeholder="Nom & Prénom du malade" [(ngModel)]="bulletin.nommalade" required #nommalade="ngModel">
                                   </mat-form-field>
+                                  <div *ngIf="nomadherent.invalid && nomadherent.touched" class="text-danger">
+                                         Ce champs est obligatoire.
+                                  </div>
                               </div>
                           </div>
 
                           <div class="row mt-3">
                             <div class="col-md-12">
-                              <label class="form-label"style="margin-right: 30px;"><strong>Le malade est :</strong></label>
-                              <mat-radio-group [(ngModel)]="bulletin.typemalade">
+                              <label class="form-label"style="margin-right: 30px;" ><strong>Le malade est :</strong></label>
+                              <mat-radio-group [(ngModel)]="bulletin.typemalade" name="typemalade" required #typemalade="ngModel">
                                <mat-radio-button value="adherent" style="margin-right: 30px;">Adhérent</mat-radio-button>
                                <mat-radio-button value="conjoint" style="margin-right: 30px;">Conjoint</mat-radio-button>
                                <mat-radio-button value="enfant" class="me-4">Enfant</mat-radio-button>
                               </mat-radio-group>
+                               <div *ngIf="typemalade.invalid && typemalade.touched" class="text-danger">
+                                Veuillez sélectionner un type de malade.
+                              </div>
                             </div>
                           </div>
                         
                           <div class="row">
                             <div class="col-md-6">
                               <mat-form-field class="example-full-width">
-                                <input matInput placeholder="Date de naissance" type="date" [(ngModel)]="bulletin.datenaissance">
+                                <input matInput name="datenaissance" placeholder="Date de naissance" type="date" [(ngModel)]="bulletin.datenaissance" required #datenaissance="ngModel">
                               </mat-form-field>
+                              <div *ngIf="datenaissance.invalid && datenaissance.touched" class="text-danger">
+                                         Ce champs est obligatoire.
+                                  </div>
                             </div>
                           </div>
 
                           <div class="row">
                               <div class="col-md-12">
                                 <mat-form-field class="example-full-width">
-                                  <input matInput placeholder="Adresse" type="text" [(ngModel)]="bulletin.adresse">
+                                  <input matInput name="Adresse" placeholder="Adresse" type="text" [(ngModel)]="bulletin.adresse" required #Adresse="ngModel">
                                 </mat-form-field>
+                                <div *ngIf="Adresse.invalid && Adresse.touched" class="text-danger">
+                                         Ce champs est obligatoire.
+                                  </div>
                               </div>
                           </div>
                           <div class="row">
                               <div class="col-md-6">
                                 <mat-form-field class="example-full-width">
-                                  <input matInput placeholder="Date dépôt" type="date" [(ngModel)]="bulletin.datedepot">
+                                  <input matInput name="datedepot" placeholder="Date dépôt" type="date" [(ngModel)]="bulletin.datedepot" required #datedepot="ngModel">
                                 </mat-form-field>
+                                 <div *ngIf="datedepot.invalid && datedepot.touched" class="text-danger">
+                                         Ce champs est obligatoire.
+                                  </div>
                               </div>
                               <div class="col-md-6">
                                 <mat-form-field class="example-full-width">
-                                  <input matInput placeholder="Date Soin" type="date" [(ngModel)]="bulletin.datesoin">
+                                  <input matInput name="datesoin" placeholder="Date Soin" type="date" [(ngModel)]="bulletin.datesoin" required #datesoin="ngModel">
                                 </mat-form-field>
+                                <div *ngIf="datesoin.invalid && datesoin.touched" class="text-danger">
+                                         Ce champs est obligatoire.
+                                  </div>
                               </div>
                           </div>
 
                           <div class="row mt-3">
                            <div class="col-md-6">
                             <label for="justif" class="form-label"><strong>Joindre un justificatif</strong></label>
-                            <input type="file" class="form-control" id="justif" (change)="onFileSelected($event)" accept="application/pdf">
-                           </div>
+                            <input type="file" class="form-control" id="justif" (change)="onFileSelected($event)" accept="application/pdf" #fichierInput >
+                                     <div *ngIf="fileTouched && !selectedFile" class="text-danger">
+                                            Veuillez joindre un fichier.
+                                     </div>                 
+                          </div>
                           </div>
 
                           <div class="d-flex justify-content-end gap-2 mt-3">
