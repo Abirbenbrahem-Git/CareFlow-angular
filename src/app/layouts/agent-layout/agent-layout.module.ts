@@ -19,6 +19,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatSelectModule} from '@angular/material/select';
 import { FormComponent } from 'app/form/form.component';
 import { MatRadioModule } from '@angular/material/radio';
+import { UpdateFormComponent } from 'app/update-form/update-form.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -35,7 +36,7 @@ import { MatRadioModule } from '@angular/material/radio';
   ],
   declarations: [
     DashboardComponent,
-    
+    UpdateFormComponent,
     TableListComponent,
     TypographyComponent,
     IconsComponent,

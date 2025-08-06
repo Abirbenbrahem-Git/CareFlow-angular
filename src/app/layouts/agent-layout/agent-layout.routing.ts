@@ -10,6 +10,7 @@ import { NotificationsComponent } from '../../notifications/notifications.compon
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
 import { FormComponent } from 'app/form/form.component';
 import { SignInComponent } from 'app/sign-in/sign-in.component';
+import { UpdateFormComponent } from 'app/update-form/update-form.component';
 
 export const AgentLayoutRoutes: Routes = [
     // {
@@ -63,4 +64,5 @@ export const AgentLayoutRoutes: Routes = [
     { path: 'notifications',  component: NotificationsComponent },
     { path: 'signin',        component: SignInComponent },
     { path: 'form',           component: FormComponent },
+    { path: 'bulletins/update/:idbulletin',  component: UpdateFormComponent },
 ];
