@@ -8,21 +8,21 @@
                       <p class="card-category">Remplir le formulaire</p>
                   </div>
                   <div class="card-body">
-                      <form>
+                      <form (ngSubmit)="onSubmit()">
                           <div class="row">
                               <div class="col-md-4">
                                 <mat-form-field class="example-full-width">
-                                    <input matInput placeholder="Référence BS" >
+                                    <input matInput placeholder="Référence BS" [(ngModel)]="bulletin.reference" name="reference" >
                                   </mat-form-field>
                               </div>
                               <div class="col-md-4">
                                   <mat-form-field class="example-full-width">
-                                    <input matInput placeholder="Nom & Prénom de l'adhérent">
+                                    <input matInput placeholder="Nom & Prénom de l'adhérent" [(ngModel)]="bulletin.nomadherent" name="nomadherent">
                                   </mat-form-field>
                               </div>
                               <div class="col-md-4">
                                   <mat-form-field class="example-full-width">
-                                    <input matInput placeholder="Nom & Prénom du malade">
+                                    <input matInput placeholder="Nom & Prénom du malade" [(ngModel)]="bulletin.nommalade" name="nommalade">
                                   </mat-form-field>
                               </div>
                           </div>
@@ -30,7 +30,7 @@
                           <div class="row mt-3">
                             <div class="col-md-12">
                               <label class="form-label"style="margin-right: 30px;"><strong>Le malade est :</strong></label>
-                              <mat-radio-group >
+                              <mat-radio-group [(ngModel)]="bulletin.typemalade" name="typemalade">
                                <mat-radio-button value="adherent" style="margin-right: 30px;">Adhérent</mat-radio-button>
                                <mat-radio-button value="conjoint" style="margin-right: 30px;">Conjoint</mat-radio-button>
                                <mat-radio-button value="enfant" class="me-4">Enfant</mat-radio-button>
@@ -41,7 +41,7 @@
                           <div class="row">
                             <div class="col-md-6">
                               <mat-form-field class="example-full-width">
-                                <input matInput placeholder="Date de naissance" type="date">
+                                <input matInput placeholder="Date de naissance" type="date" [(ngModel)]="bulletin.datenaissance" name="datenaissance">
                               </mat-form-field>
                             </div>
                           </div>
@@ -49,19 +49,19 @@
                           <div class="row">
                               <div class="col-md-12">
                                 <mat-form-field class="example-full-width">
-                                  <input matInput placeholder="Adresse" type="text">
+                                  <input matInput placeholder="Adresse" type="text" [(ngModel)]="bulletin.adresse" name="adresse">
                                 </mat-form-field>
                               </div>
                           </div>
                           <div class="row">
                               <div class="col-md-6">
                                 <mat-form-field class="example-full-width">
-                                  <input matInput placeholder="Date dépôt" type="date">
+                                  <input matInput placeholder="Date dépôt" type="date" [(ngModel)]="bulletin.datedepot" name="datedepot">
                                 </mat-form-field>
                               </div>
                               <div class="col-md-6">
                                 <mat-form-field class="example-full-width">
-                                  <input matInput placeholder="Date Soin" type="date">
+                                  <input matInput placeholder="Date Soin" type="date" [(ngModel)]="bulletin.datesoin" name="datesoin">
                                 </mat-form-field>
                               </div>
                           </div>
@@ -69,12 +69,12 @@
                           <div class="row mt-3">
                            <div class="col-md-6">
                             <label for="justif" class="form-label"><strong>Joindre un justificatif</strong></label>
-                            <input type="file" class="form-control" id="justif" >
+                            <input type="file" class="form-control" id="justif" (change)="onFileSelected($event)">
                            </div>
                           </div>
 
                           <div class="d-flex justify-content-end gap-2 mt-3">
-                            <button mat-raised-button type="button" class="btn btn-danger" style="margin-right: 30px;">Annuler</button>
+                            <button mat-raised-button type="button" class="btn btn-danger" style="margin-right: 30px;"  routerLink="/agent/typography">Annuler</button>
                             <button mat-raised-button type="submit" class="btn btn-danger">Envoyer le dossier</button>
                           </div>
                           

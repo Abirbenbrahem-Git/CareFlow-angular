@@ -35,4 +35,12 @@ export class BulletinService {
     return this.http.delete(`${this.apiUrl}/delete/${id}`, { responseType: 'text' });
   }
 
+   getBulletinById(id: number): Observable<any> {
+    return this.http.get(`${this.apiUrl}/find/${id}`);
+  }
+
+  updateBulletin(id: number, formData: FormData): Observable<any> {
+    return this.http.put(`${this.apiUrl}/update/${id}`, formData);
+  }
+
 }
