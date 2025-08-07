@@ -1,6 +1,11 @@
 import { Routes } from '@angular/router';
+import { DashboardComponent } from 'app/dashboard/dashboard.component';
+import { IconsComponent } from 'app/icons/icons.component';
+import { NotificationsComponent } from 'app/notifications/notifications.component';
 
 import { SignInComponent } from 'app/sign-in/sign-in.component';
+import { TypographyComponent } from 'app/typography/typography.component';
+import { UserProfileComponent } from 'app/user-profile/user-profile.component';
 
 export const ResponsableLayoutRoutes: Routes = [
     // {
@@ -46,4 +51,9 @@ export const ResponsableLayoutRoutes: Routes = [
     //     }]
     // }
     { path: 'signin',        component: SignInComponent },
+    { path: 'dashboard',      component: DashboardComponent },
+    { path: 'user-profile',   component: UserProfileComponent },
+    { path: 'icons',          component: TypographyComponent },
+    { path: 'maps',           component: IconsComponent },
+    { path: 'notifications',  component: NotificationsComponent },
 ];
