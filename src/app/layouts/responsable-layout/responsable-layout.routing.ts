@@ -6,6 +6,7 @@ import { NotificationsComponent } from 'app/notifications/notifications.componen
 import { SignInComponent } from 'app/sign-in/sign-in.component';
 import { TypographyComponent } from 'app/typography/typography.component';
 import { UserProfileComponent } from 'app/user-profile/user-profile.component';
+import { ValidationComponent } from 'app/validation/validation.component';
 
 export const ResponsableLayoutRoutes: Routes = [
     // {
@@ -56,4 +57,5 @@ export const ResponsableLayoutRoutes: Routes = [
     { path: 'icons',          component: TypographyComponent },
     { path: 'maps',           component: IconsComponent },
     { path: 'notifications',  component: NotificationsComponent },
+    { path: 'valid',  component: ValidationComponent },
 ];

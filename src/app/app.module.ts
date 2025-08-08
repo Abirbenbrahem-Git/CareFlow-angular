@@ -16,7 +16,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatIconModule } from '@angular/material/icon'; 
-import { MatButtonModule } from '@angular/material/button'; 
+import { MatButtonModule } from '@angular/material/button';
+import { ValidationComponent } from './validation/validation.component'; 
 
 @NgModule({
   imports: [
@@ -40,7 +41,8 @@ import { MatButtonModule } from '@angular/material/button';
     AbirComponent,
     SignInComponent,
     SignUpComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    ValidationComponent
 
   ],
   providers: [],
