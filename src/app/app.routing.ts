@@ -11,7 +11,6 @@ import { ResponsableLayoutComponent } from './layouts/responsable-layout/respons
 
 const routes: Routes =[
   {path: 'abir',component:AbirComponent},
-  {path: 'signin',component:SignInComponent},
   {path: 'signup',component:SignUpComponent},
   {
     path: 'responsable',
@@ -34,11 +33,7 @@ const routes: Routes =[
       loadChildren: () => import('./layouts/agent-layout/agent-layout.module').then(m => m.AgentLayoutModule)
     }]
   },
-  {
-    path: '',
-    redirectTo: 'dashboard',
-    pathMatch: 'full',
-  }
+  {path: '',component:SignInComponent},
 ];
 
 @NgModule({

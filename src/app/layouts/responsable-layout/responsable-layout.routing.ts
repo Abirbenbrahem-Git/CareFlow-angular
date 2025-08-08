@@ -50,8 +50,8 @@ export const ResponsableLayoutRoutes: Routes = [
     //         component: UpgradeComponent
     //     }]
     // }
-    { path: 'signin',        component: SignInComponent },
     { path: 'dashboard',      component: DashboardComponent },
+    { path: 'signin',        component: SignInComponent },
     { path: 'user-profile',   component: UserProfileComponent },
     { path: 'icons',          component: TypographyComponent },
     { path: 'maps',           component: IconsComponent },

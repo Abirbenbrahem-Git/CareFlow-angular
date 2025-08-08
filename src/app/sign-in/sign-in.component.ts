@@ -23,19 +23,22 @@ export class SignInComponent implements OnInit {
     };
 
     this.authService.login(credentials).subscribe({
-      next: (res: LoginResponse) => {
-        if (res.role === 'agent') {
-          this.router.navigate(['/agent/dashboard']);
-        } else if (res.role === 'responsable') {
-          this.router.navigate(['/responsable']);
-        } else {
-          this.router.navigate(['/admin']); 
-        }
-      },
-      error: () => {
-        this.errorMessage = 'Email ou mot de passe incorrect.';
-      }
-    });
+  next: (user: any) => {
+    localStorage.setItem('currentUser', JSON.stringify(user));
+
+    if (user.role === 'agent') {
+      this.router.navigate(['/agent/dashboard']);
+    } else if (user.role === 'responsable') {
+      this.router.navigate(['/responsable/dashboard']);
+    } else {
+      this.router.navigate(['/admin']);
+    }
+  },
+  error: () => {
+    this.errorMessage = 'Email ou mot de passe incorrect.';
+  }
+});
+
   }
 
   ngOnInit(): void {
