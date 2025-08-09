@@ -43,4 +43,22 @@ export class BulletinService {
     return this.http.put(`${this.apiUrl}/update/${id}`, formData);
   }
 
+  downloadFile(id: number): Observable<Blob> {
+    return this.http.get(`${this.apiUrl}/download/${id}`, {
+      responseType: 'blob' 
+    });
+  }
+
+  updateEtat(id: number, etat: string): Observable<void> {
+  return this.http.put<void>(
+    `${this.apiUrl}/update-etat/${id}`,
+    {}, 
+    { params: { etat } }
+  );
+  }
+
+  getBulletinsEnCours(): Observable<Bulletin[]> {
+  return this.http.get<Bulletin[]>(`${this.apiUrl}/en-cours`);
+  }
+
 }

@@ -42,13 +42,33 @@
                                     Actions
                                   </th>
                               </thead>
-                              <tbody>
-                                <tr >
-                                  
-                                  <td></td>
-                                  <td class="text-primary"></td>
-                                  
-                              </tr>
+                               <tbody>
+                                  <tr *ngFor="let b of bulletins">
+                                      <td>{{ b.reference }}</td>
+                                      <td>{{ b.nomadherent }}</td>
+                                      <td>{{ b.nommalade }}</td>
+                                      <td>{{ b.typemalade }}</td>
+                                      <td>{{ b.adresse }}</td>
+                                      <td>{{ b.datenaissance | date:'dd/MM/yyyy' }}</td>
+                                      <td>{{ b.datedepot | date:'dd/MM/yyyy' }}</td>
+                                      <td>{{ b.datesoin | date:'dd/MM/yyyy' }}</td>
+                                      <td>
+                                          <button class="btn btn-sm btn-info"
+                                                  (click)="downloadFile(b.idbulletin, b.reference)">
+                                              📄 Télécharger
+                                          </button>
+                                      </td>
+                                      <td>
+                                          <button class="btn btn-sm btn-success"
+                                                  (click)="updateEtat(b.idbulletin, 'valide')">
+                                              ✔ Accepter
+                                          </button>
+                                          <button class="btn btn-sm btn-danger"
+                                                  (click)="updateEtat(b.idbulletin, 'refuse')">
+                                              ✖ Refuser
+                                          </button>
+                                      </td>
+                                  </tr>
                               </tbody>
                           </table>
                       </div>
