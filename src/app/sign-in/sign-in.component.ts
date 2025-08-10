@@ -31,7 +31,7 @@ export class SignInComponent implements OnInit {
     } else if (user.role === 'responsable') {
       this.router.navigate(['/responsable/dashboard']);
     } else {
-      this.router.navigate(['/admin']);
+      this.router.navigate(['/admin/dashboard']);
     }
   },
   error: () => {
