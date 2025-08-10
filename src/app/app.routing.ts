@@ -8,6 +8,7 @@ import { AbirComponent } from './abir/abir.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { ResponsableLayoutComponent } from './layouts/responsable-layout/responsable-layout.component';
+import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 
 const routes: Routes =[
   {path: 'abir',component:AbirComponent},
@@ -30,10 +31,26 @@ const routes: Routes =[
     component: AgentLayoutComponent,
     children: [{
       path: '',
-      loadChildren: () => import('./layouts/agent-layout/agent-layout.module').then(m => m.AgentLayoutModule)
+      loadChildren: () => import('./layouts/agent-layout/agent-layout.module').then(m => m.AgentLayoutModule),
     }]
   },
+
+  {
+    path: 'admin',
+    component: AdminLayoutComponent,
+    children: [
+      {
+        path: '',
+        loadChildren: () =>
+          import('./layouts/admin-layout/admin-layout.module').then(
+            (m) => m.AdminLayoutModule ),
+      },
+    ],
+  },
+
   {path: '',component:SignInComponent},
+
+
 ];
 
 @NgModule({

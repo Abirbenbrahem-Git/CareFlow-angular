@@ -17,7 +17,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatIconModule } from '@angular/material/icon'; 
 import { MatButtonModule } from '@angular/material/button';
-import { ValidationComponent } from './validation/validation.component'; 
+import { ValidationComponent } from './validation/validation.component';
+import { AdminLayoutModule } from './layouts/admin-layout/admin-layout.module'; 
 
 @NgModule({
   imports: [
@@ -34,6 +35,7 @@ import { ValidationComponent } from './validation/validation.component';
     MatRadioModule,
     MatIconModule,
     MatButtonModule,
+    AdminLayoutModule,
   ],
   declarations: [
     AppComponent,
