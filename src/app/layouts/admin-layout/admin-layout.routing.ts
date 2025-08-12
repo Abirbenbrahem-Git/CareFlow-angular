@@ -9,6 +9,7 @@ import { TypographyComponent } from 'app/typography/typography.component';
 import { UserProfileComponent } from 'app/user-profile/user-profile.component';
 import { ValidationComponent } from 'app/validation/validation.component';
 import { UserManagementComponent } from './user-management/user-management.component';
+import { UpdateUserComponent } from './update-user/update-user.component';
 
 export const AdminLayoutRoutes: Routes = [
     // {
@@ -61,4 +62,6 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'notifications',  component: NotificationsComponent },
     { path: 'users',  component: UserManagementComponent },
     { path: 'valid',  component: ValidationComponent },
+    {path: 'users/update/:iduser', component: UpdateUserComponent }
+
 ];

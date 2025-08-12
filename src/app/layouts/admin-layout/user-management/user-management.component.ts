@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../../services/user.service';
 import { User } from '../../../services/user.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-management',
@@ -11,7 +12,7 @@ export class UserManagementComponent implements OnInit {
 
   users: User[] = [];
 
-  constructor(private userService: UserService) {}
+  constructor(private userService: UserService, private router: Router) {}
 
   ngOnInit(): void {
     this.loadUsers();
@@ -42,6 +43,8 @@ export class UserManagementComponent implements OnInit {
     });
   }
 }
-
+     goToUpdateUser(id: number) {
+      this.router.navigate(['/admin/users/update', id]);
+     }
 
 }

@@ -1,0 +1,74 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-11">
+              <div class="card">
+                  <div class="card-header card-header-danger">
+                      <h4 class="card-title">Modifier Profil</h4>
+                      <p class="card-category">Compléteer profil</p>
+                  </div>
+                  <div class="card-body">
+                      <form (ngSubmit)="onSubmit()">
+                          <div class="row">
+                              <div class="col-md-5">
+                                <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Numéro de CIN" [(ngModel)]="user.cin" name="cin">
+                                  </mat-form-field>
+                              </div>
+                              <div class="col-md-3">
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Nom" [(ngModel)]="user.nom" name="nom">
+                                  </mat-form-field>
+                              </div>
+                              <div class="col-md-4">
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Prénom" [(ngModel)]="user.prenom" name="prenom">
+                                  </mat-form-field>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-md-6">
+                                <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="Adresse e-mail"[(ngModel)]="user.mail" name="mail">
+                                </mat-form-field>
+                              </div>
+                              <div class="col-md-6">
+                                <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="Numéro de téléphone" type="number" [(ngModel)]="user.numtel" name="numtel">
+                                </mat-form-field>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-md-12">
+                                <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="Mot de passe" type="password" [(ngModel)]="user.motdepasse" name="motdepasse">
+                                </mat-form-field>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-md-4">
+                                <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="Résidence" type="text" [(ngModel)]="user.residence" name="residence">
+                                </mat-form-field>
+                              </div>
+                          </div>
+
+                          <div class="row mt-3">
+                           <div class="col-md-6">
+                             <label class="form-label"><strong>Rôle :</strong></label>
+                            <mat-radio-group aria-label="Sélectionner un rôle" class="d-flex flex-column" [(ngModel)]="user.role" name="role">
+                             <mat-radio-button value="agent" class="mb-2">Agent</mat-radio-button>
+                             <mat-radio-button value="responsable">Responsable régionale</mat-radio-button>
+                            </mat-radio-group>
+                           </div> 
+                          </div>
+
+                          <button mat-raised-button type="submit" class="btn btn-danger pull-right">Modifier Profil</button>
+                          <div class="clearfix"></div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
