@@ -15,6 +15,10 @@ export class UserService {
   register(user: User): Observable<any> {
     return this.http.post(`${this.baseUrl}/register`, user);
   }
+  
+   getAllUsers(): Observable<User[]> {
+    return this.http.get<User[]>(`${this.baseUrl}/all`);
+  }
 
 
 }

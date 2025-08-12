@@ -12,11 +12,13 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatRadioModule } from '@angular/material/radio';
+import { UserManagementComponent } from './user-management/user-management.component';
 
 @NgModule({
   declarations: [
     AdminLayoutComponent,
-    SidebarAdminComponent
+    SidebarAdminComponent,
+    UserManagementComponent
   ],
     imports: [
       CommonModule,

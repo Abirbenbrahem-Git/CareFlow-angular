@@ -8,6 +8,7 @@ import { SignInComponent } from 'app/sign-in/sign-in.component';
 import { TypographyComponent } from 'app/typography/typography.component';
 import { UserProfileComponent } from 'app/user-profile/user-profile.component';
 import { ValidationComponent } from 'app/validation/validation.component';
+import { UserManagementComponent } from './user-management/user-management.component';
 
 export const AdminLayoutRoutes: Routes = [
     // {
@@ -58,5 +59,6 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'icons',          component: TypographyComponent },
     { path: 'maps',           component: IconsComponent },
     { path: 'notifications',  component: NotificationsComponent },
+    { path: 'users',  component: UserManagementComponent },
     { path: 'valid',  component: ValidationComponent },
 ];
