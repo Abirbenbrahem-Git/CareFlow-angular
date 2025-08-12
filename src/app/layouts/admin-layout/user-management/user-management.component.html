@@ -10,59 +10,39 @@
                   <div class="card-body">
                       <div class="table-responsive">
                           <table class="table">
-                              <thead class=" text-primary">
-                                  <th>
-                                      CIN
-                                  </th>
-                                  <th>
-                                      Nom 
-                                  </th>
-                                  <th>
-                                      Prénom
-                                  </th>
-                                  <th>
-                                      Adresse E-mail
-                                  </th>
-                                  <th>
-                                      Date de naissance
-                                  </th>
-                                  <th>
-                                      Numéro de téléphone
-                                  </th>
-                                  <th>
-                                      Résidence
-                                  </th>
-                                   <th>
-                                      Role
-                                  </th>
-                                  <th>
-                                    Actions
-                                  </th>
+                              <thead class="text-primary">
+                                <th>CIN</th>
+                                <th>Nom</th>
+                                <th>Prénom</th>
+                                <th>Adresse E-mail</th>
+                                <th>Numéro de téléphone</th>
+                                <th>Résidence</th>
+                                <th>Role</th>
+                                <th>Actions</th>
                               </thead>
                               <tbody>
                                <tr *ngFor="let user of users">
-                                <td>{{ user.cin }}</td>
-                                <td>{{ user.nom }}</td>
-                                <td>{{ user.prenom }}</td>
-                                <td>{{ user.mail }}</td>
-                                <td>{{ user.dateNaissance }}</td>
-                                <td>{{ user.numtel }}</td>
-                                <td>{{ user.residence }}</td>
-                                <td>{{ user.role }}</td>
-                                <td class="td-actions text-right">
-                                  <button mat-raised-button type="button" matTooltip="Modifier" [matTooltipPosition]="'above'" class="btn btn-success btn-link btn-sm btn-just-icon">
-                                    <i class="material-icons">edit</i>
-                                  </button>
-                                  <button mat-raised-button type="button" matTooltip="Supprimer" [matTooltipPosition]="'above'" class="btn btn-danger btn-link btn-sm btn-just-icon">
-                                    <i class="material-icons">close</i>
-                                  </button>
-                                </td>
-                               </tr>
-                              </tbody>
+                                  <td>{{ user.cin }}</td>
+                                  <td>{{ user.nom }}</td>
+                                  <td>{{ user.prenom }}</td>
+                                  <td>{{ user.mail }}</td>
+                                  <td>{{ user.numtel }}</td>
+                                  <td>{{ user.residence }}</td>
+                                  <td>{{ user.role }}</td>
+                                  <td class="td-actions text-right">
+                                    <button mat-raised-button type="button" matTooltip="Modifier" [matTooltipPosition]="'above'" class="btn btn-success btn-link btn-sm btn-just-icon">
+                                        <i class="material-icons">edit</i>
+                                    </button>
+                                    <button mat-raised-button type="button" matTooltip="Supprimer" [matTooltipPosition]="'above'" class="btn btn-danger btn-link btn-sm btn-just-icon" (click)="deleteUser(user.iduser)">
+                                        <i class="material-icons">close</i>
+                                   </button>
+                                  </td>
+                                 </tr>
+                                </tbody>
                           </table>
                       </div>
                   </div>
               </div>
           </div>
-  </div>
-</div>
+       </div>
+    </div>

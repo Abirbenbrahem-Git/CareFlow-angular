@@ -1,4 +1,5 @@
 export interface User {
+  iduser?: number;
   cin: number;
   nom: string;
   prenom: string;

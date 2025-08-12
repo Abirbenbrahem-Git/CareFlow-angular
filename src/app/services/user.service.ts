@@ -20,5 +20,9 @@ export class UserService {
     return this.http.get<User[]>(`${this.baseUrl}/all`);
   }
 
+  deleteUser(iduser: number): Observable<any> {
+    return this.http.delete(`${this.baseUrl}/${iduser}`);
+  }
+
 
 }

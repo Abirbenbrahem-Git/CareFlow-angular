@@ -28,4 +28,20 @@ export class UserManagementComponent implements OnInit {
     });
   }
 
+  deleteUser(iduser: number): void {
+  if (confirm("Voulez-vous vraiment supprimer cet utilisateur ?")) {
+    this.userService.deleteUser(iduser).subscribe({
+      next: () => {
+        this.users = this.users.filter(user => user.iduser !== iduser);
+        alert('Utilisateur supprimé avec succès.');
+      },
+      error: err => {
+        console.error('Erreur lors de la suppression', err);
+        alert('Erreur lors de la suppression de l\'utilisateur.');
+      }
+    });
+  }
+}
+
+
 }
