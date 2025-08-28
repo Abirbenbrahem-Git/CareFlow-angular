@@ -1,6 +1,5 @@
 import { Routes } from '@angular/router';
 
-import { DashboardComponent } from '../../dashboard/dashboard.component';
 import { UserProfileComponent } from '../../user-profile/user-profile.component';
 import { TableListComponent } from '../../table-list/table-list.component';
 import { TypographyComponent } from '../../typography/typography.component';
@@ -11,6 +10,7 @@ import { UpgradeComponent } from '../../upgrade/upgrade.component';
 import { FormComponent } from 'app/form/form.component';
 import { SignInComponent } from 'app/sign-in/sign-in.component';
 import { UpdateFormComponent } from 'app/update-form/update-form.component';
+import { AccueilComponent } from 'app/accueil/accueil.component';
 
 export const AgentLayoutRoutes: Routes = [
     // {
@@ -55,7 +55,7 @@ export const AgentLayoutRoutes: Routes = [
     //         component: UpgradeComponent
     //     }]
     // }
-    { path: 'dashboard',      component: DashboardComponent },
+    { path: 'accueil',      component:  AccueilComponent},
     { path: 'user-profile',   component: UserProfileComponent },
     { path: 'table-list',     component: UserProfileComponent },
     { path: 'typography',     component: TableListComponent },

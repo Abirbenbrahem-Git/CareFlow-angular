@@ -10,6 +10,7 @@ import { UserProfileComponent } from 'app/user-profile/user-profile.component';
 import { ValidationComponent } from 'app/validation/validation.component';
 import { UserManagementComponent } from './user-management/user-management.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
+import { FormComponent } from 'app/form/form.component';
 
 export const AdminLayoutRoutes: Routes = [
     // {
@@ -62,6 +63,7 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'notifications',  component: NotificationsComponent },
     { path: 'users',  component: UserManagementComponent },
     { path: 'valid',  component: ValidationComponent },
+    { path: 'form',           component: FormComponent },
     {path: 'users/update/:iduser', component: UpdateUserComponent }
 
 ];

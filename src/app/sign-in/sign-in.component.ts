@@ -27,9 +27,9 @@ export class SignInComponent implements OnInit {
     localStorage.setItem('currentUser', JSON.stringify(user));
 
     if (user.role === 'agent') {
-      this.router.navigate(['/agent/dashboard']);
+      this.router.navigate(['/agent/accueil']);
     } else if (user.role === 'responsable') {
-      this.router.navigate(['/responsable/dashboard']);
+      this.router.navigate(['/responsable/accueil']);
     } else {
       this.router.navigate(['/admin/dashboard']);
     }

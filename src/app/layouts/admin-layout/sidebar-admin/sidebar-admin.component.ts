@@ -11,6 +11,7 @@ export const ROUTES: RouteInfo[] = [
     { path: '/admin/dashboard', title: 'Tableau de bord',  icon: 'dashboard', class: '' },
     { path: '/admin/user-profile', title: 'Profil administratif',  icon:'person', class: '' },
     { path: '/admin/users', title: 'Gestion utilisateurs',  icon:'group', class: '' },
+    { path: '/admin/form', title: 'Saisir un BS',  icon:'content_paste', class: '' },
     { path: '/admin/valid', title: 'Suivi dossiers',  icon:'assignment', class: '' },
     { path: '/admin/notifications', title: 'Notifications',  icon:'notifications', class: '' },
     { path: '/admin/icons', title: 'Réclamation',  icon:'feedback', class: '' },

@@ -18,7 +18,8 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatIconModule } from '@angular/material/icon'; 
 import { MatButtonModule } from '@angular/material/button';
 import { ValidationComponent } from './validation/validation.component';
-import { AdminLayoutModule } from './layouts/admin-layout/admin-layout.module'; 
+import { AdminLayoutModule } from './layouts/admin-layout/admin-layout.module';
+import { AccueilComponent } from './accueil/accueil.component'; 
 
 @NgModule({
   imports: [
@@ -44,7 +45,8 @@ import { AdminLayoutModule } from './layouts/admin-layout/admin-layout.module';
     SignInComponent,
     SignUpComponent,
     UserProfileComponent,
-    ValidationComponent
+    ValidationComponent,
+    AccueilComponent
 
   ],
   providers: [],

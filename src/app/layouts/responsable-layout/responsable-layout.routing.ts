@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { AccueilComponent } from 'app/accueil/accueil.component';
 import { DashboardComponent } from 'app/dashboard/dashboard.component';
 import { IconsComponent } from 'app/icons/icons.component';
 import { NotificationsComponent } from 'app/notifications/notifications.component';
@@ -51,7 +52,7 @@ export const ResponsableLayoutRoutes: Routes = [
     //         component: UpgradeComponent
     //     }]
     // }
-    { path: 'dashboard',      component: DashboardComponent },
+    { path: 'accueil',      component:  AccueilComponent},
     { path: 'signin',        component: SignInComponent },
     { path: 'user-profile',   component: UserProfileComponent },
     { path: 'icons',          component: TypographyComponent },
