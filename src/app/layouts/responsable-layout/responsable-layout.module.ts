@@ -12,11 +12,13 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatSelectModule} from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
+import { NavbarResponsableComponent } from './navbar-responsable/navbar-responsable.component';
 
 @NgModule({
   declarations: [
     ResponsableLayoutComponent,
     SidebarResponsableComponent,
+    NavbarResponsableComponent,
     
   ],
   imports: [
